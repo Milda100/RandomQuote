@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const quoteSlice = createSlice({
     name: "quote",
-    initialState: { quote: "This is a movie quote!", author: "Unknown" },
+    initialState: { quote: "This is a quote!", author: "Unknown" },
     reducers: {
         setQuote(state, action) {
             state.quote = action.payload.quote;

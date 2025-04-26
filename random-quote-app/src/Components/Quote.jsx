@@ -26,7 +26,7 @@ function Quote() {
       </blockquote>
       <Button 
         id="new-quote" 
-        className="btn btn-dark mt-3"
+        className="btn mt-3 float-end"
         onClick={fetchNewQuote}
       ><i className="bi bi-chat-square-quote-fill"></i> New Quote</Button>
     </>

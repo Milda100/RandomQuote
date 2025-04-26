@@ -1,0 +1,61 @@
+@import './Styles/_variables.scss';
+@import './Styles/mixins';
+@import './Styles/functions';
+@import './Styles/animation';
+
+
+#container {
+    background-color: color("primary");
+}
+
+#quote-box {
+    max-width: 50%;
+    @include box-shadow(0.5);
+    background-color: lighten(color("primary"), 5%);
+    @include transition-effect;
+    animation: fade-scale 0.5s ease-in-out;
+
+    &:hover {
+        @include hover-effect;
+      }
+  }
+
+#text {
+    font-size: 1.5rem;
+}
+
+#new-quote {
+    @include button-styles;
+    @include box-shadow(0.5);
+  }
+
+
+#share-icons {
+    a {
+      font-size: 1.5rem;
+      color: color("neutral");
+      @include transition-effect;
+  
+      &:hover {
+        color: lighten(color("neutral"), 15%);
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    #quote-box {
+      max-width: 80%;
+    }
+    #text, #author {
+        font-size: 1rem;
+    }
+    #new-quote {
+        @include button-styles($padding: 5px 10px, $font-size: 0.8rem);
+    }
+    #share-icons {
+        a {
+          font-size: 1rem;
+        }
+  }
+}
